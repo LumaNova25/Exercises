@@ -1,0 +1,110 @@
+body {
+    font-family: "cormorant", serif;
+}
+
+h1 {
+    display: inline-block;
+    font-weight: 300;
+    margin: 0 32px 0 0; /*zet dit op nul als je de default margin van h1 wilt verwijderen, want dat duwt ook weer iets weg, zie dev
+    tools oranje*/
+    }
+
+.links {
+    display: inline-block;
+}
+
+.links li {
+    display: inline-block;
+   }
+/*.links li geeft aan: alle li's in de class links. Dit doe je voor als er nog meer li's ergens staan, anders selecteer
+je alle li's met alleen li {}*/
+
+/* hi, nav, li {
+    display: inline-block;
+} 
+Dit kun je doen wanneer dit het enige aan styling is met deze elementen, anders doe je ze apart */
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 0 8px; /*0=top/bottom, 8px=left/right*/
+}
+
+.links ul {
+    padding: 0;
+}
+
+.navbar {
+    margin: 32px;
+}
+
+a.active { /*dit zegt een anchor tag met active class*/
+    border-bottom: 1px solid black; /*dit is anders dan een text-decoration: underline. Border bottom kun je aanpassen
+    (dikker/dunner, etc.) en kan je ook met padding werken eventueel. Wordt veel zo gebruikt */
+}
+
+.gallery {
+    padding: 16px; /*de meerdere div's/boxes zijn in een grotere box (section) gezet, zodat we
+    padding kunnen toevoegen. Omdat deze padding betrekking heeft op de buitenste box (section),
+    wordt padding alleen aan de buitenkant toegevoegd van het geheel. Stel een border om het geheel
+    voor*/
+}
+
+.card img {   /*om het niet voor alle img te laten gelden, kies je voor de img IN een .card*/
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.card {
+    display: inline-block; /*omdat een img een block is, komt het niet naast elkaar*/
+    width: 49.75%; /*je doet net geen 50%, omdat de witte space tussen de elementen dan voor problemen
+    zorgt*/
+    box-sizing: border-box; /*hele box, incl. padding en border, is 49.75%. Als je dit niet doet, en 
+    je voegt bijv. padding 20px toe, dan berekent die de 20px boven op 49,75% width. Dan wordt de box
+    weer groter en past het niet meer zoals het stond*/
+    padding: 16px;
+}
+
+.card h2 {   /*Geeft aan: alle h2's in een .card div*/
+    display: inline-block; /*want een h2 is block: komt niet naast elkaar*/
+    margin: 8px 0 16px 0; /*top right bottom left*/
+    font-weight: 300;
+}
+
+.card img:hover { /*wanneer je hovert over een image van de class .card, moet die iets transparanter worden. Doe
+    dit met opacity*/
+    opacity: 0.9;
+}
+
+.about {
+    width: 40%; /*.about omdat je het voor de gehele container zet. Geen px, want met % past
+    die zichzelf aan wanneer je het venster smaller/breder maakt*/
+    min-width: 600px; /*Dit zet je als de inhoud niet smaller dan de ingestelde waarde mag 
+    worden wanneer je het venster heel smal maakt = stopt met krimpen bij 600px*/
+    margin: 100px 0 100px 200px; /*"push it away from the left, bottom and top"*/
+    }
+
+.about h3 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.contact {
+    margin-top: 100px;
+}
+
+.contact p {
+    margin: 0; /*standaard margin tussen de paragrafen verwijderen*/
+    font-size: 20px;
+}
+
+.cta {
+    border-bottom: 1px solid black; 
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-top: 0; /*via devtools zag je een beetje margin-top. Om het wat dichter op het element erboven te krijgen,
+    kun je de margin weghalen met margin-top 0*/
+}
+
